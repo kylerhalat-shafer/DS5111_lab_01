@@ -11,7 +11,7 @@ fibonachi.png:
 	gnuplot -e "set datafile separator ','; set term png; set output 'fibonachi.png'; plot 'synthetic_data.csv' using 1:3 with lines"
 
 clean:
-	rm -f square_wave.png fibonachi.png synthetic_data.csv
+	rm -f square_wave.png fibonachi.png synthetic_data.csv||true
 
 .PHONY: all_images
 all_images:fibonachi.png square_wave.png
